@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+<div class="row align-items-md-stretch">
+ 
+  <div class="col-lg-12">
+    <div class="h-100 p-5 bg-light border rounded-3">
+      <h2>{{event.title}}</h2>
+      <p>{{event.description}}</p>
+      <p>{{event.nbe_participant}}</p>
+      <img src="{{ event.image.url }}" class="w-50" alt="event_img" />
+      <p>{{event.evt_date}}</p>
+      <p>{{event.category}}</p>
+      
+      <a href="{% url 'participate'  event.id %}" class="btn btn-outline-secondary" type="button">Participate</a>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock content %}
+
